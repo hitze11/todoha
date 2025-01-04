@@ -1,7 +1,7 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
+import javascriptLogo from "./javascript.svg";
+import viteLogo from "/vite.svg";
+import { setupCounter } from "./counter.js";
 
 document.querySelector("#app").innerHTML = `
   <div>
@@ -14,14 +14,20 @@ document.querySelector("#app").innerHTML = `
     <h1>Hello Vite!</h1>
     <div class="card">
       <button id="counter" type="button"></button>
+      <button id="todo">Todo</button>
+    </div>
+    <script src="script.js" defer></script>
 
-      
-    
-      </div>
     <p class="read-the-docs">
       Click on the Vite logo to learn more
     </p>
   </div>
 `;
 
-setupCounter(document.querySelector('#counter'))
+
+setupCounter(document.querySelector("#counter"));
+const todo = document.querySelector("#todo");
+todo.addEventListener("click", () => {
+
+  window.location.href = "/src/todo.html";
+});
